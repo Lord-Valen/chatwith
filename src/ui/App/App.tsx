@@ -1,18 +1,13 @@
 import React from 'react';
 
+import { config } from '../../config/index.js';
 import { Box, Static, Text } from 'ink';
 import { Configuration, OpenAIApi } from 'openai';
 import { FC, useState } from 'react';
-import { z } from 'zod';
 import { ChatMessage, ChatMessageT, TextBox } from '../index.js';
 
-const envSchema = z.object({
-    OPEN_API_KEY: z.string(),
-});
-const env = envSchema.parse(process.env);
-
 const configuration = new Configuration({
-    apiKey: env.OPEN_API_KEY,
+    apiKey: config.OPEN_API_KEY,
 });
 
 const openai = new OpenAIApi(configuration);

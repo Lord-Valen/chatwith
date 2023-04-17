@@ -1,6 +1,7 @@
 node_modules
 dist
 .std
+config.json
 
 # nixago: ignore-linked-files
 .conform.yaml
