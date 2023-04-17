@@ -36,5 +36,8 @@
     "include": [
         "src/**/*",
         "global.d.ts"
-    ]
+    ],
+    "ts-node": {
+        "esm": true
+    }
 }
