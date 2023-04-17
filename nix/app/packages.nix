@@ -17,6 +17,6 @@ in rec {
 			"src"
 		];
 
-		npmDepsHash = "sha256-dERBU0vnuQf2+gZej7OLtC6phD9Lnkv80oHmFoqgXDI=";
+		npmDepsHash = "sha256-mralf3y0oma+1R2gWqgDi/ZXw7wDXDgfTPzFWyLNNHs=";
 	};
 }
