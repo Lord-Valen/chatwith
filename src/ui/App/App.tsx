@@ -33,7 +33,7 @@ export const App: FC = () => {
         };
 
         const completion = await openai.createChatCompletion({
-            model: "gpt-3.5-turbo",
+            model: config.MODEL,
             messages: [...history, userMessage],
         });
 
