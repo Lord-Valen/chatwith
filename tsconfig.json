@@ -31,13 +31,9 @@
         "jsx": "react",
         "experimentalDecorators": true,
         "skipLibCheck": true,
-        "baseUrl": "./src"
     },
     "include": [
         "src/**/*",
         "global.d.ts"
-    ],
-    "ts-node": {
-        "esm": true
-    }
+    ]
 }
