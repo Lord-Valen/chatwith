@@ -3,11 +3,12 @@
   cell,
 }: let
   inherit (inputs) nixpkgs std self;
+  lock = builtins.fromJSON (builtins.readFile (self + "/package-lock.json"));
+  inherit (lock) name version;
 in rec {
-  default = chatwith;
-  chatwith = nixpkgs.buildNpmPackage {
-    pname = "chatwith";
-    version = "0.1.3";
+  default = nixpkgs.buildNpmPackage {
+    pname = name;
+    inherit version;
 
     src = std.incl self [
       "package.json"
@@ -17,6 +18,7 @@ in rec {
       "src"
     ];
 
-    npmDepsHash = "sha256-MY7YbuB+o/4Bb4jJIWMTFD2OZi2sa/6csQK8H3mdSF0=";
+    # Read it from a separate file so that scripts can easily touch it.
+    npmDepsHash = builtins.readFile ./depsHash.txt;
   };
 }
