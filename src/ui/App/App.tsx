@@ -2,15 +2,9 @@ import React from 'react';
 
 import { config } from '../../config/index.js';
 import { Box, Static, Text } from 'ink';
-import { Configuration, OpenAIApi } from 'openai';
 import { FC, useState } from 'react';
 import { ChatMessage, ChatMessageT, TextBox } from '../index.js';
-
-const configuration = new Configuration({
-    apiKey: config.OPEN_API_KEY,
-});
-
-const openai = new OpenAIApi(configuration);
+import { openai } from '../../clients/openai.js';
 
 export const App: FC = () => {
     const [input, setInput] = useState<string>('');
@@ -74,4 +68,3 @@ export const App: FC = () => {
         <Prompt />
     </Box>
 }
-
