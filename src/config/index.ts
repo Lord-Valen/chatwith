@@ -23,6 +23,7 @@ export function getConfig(): TConfigSchema {
         }
         throw new Error(e);
     }
+
     return config;
 }
 

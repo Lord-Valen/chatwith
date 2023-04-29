@@ -16,6 +16,7 @@
         "@pinecone-database/pinecone": "^0.0.12",
         "commander": "^10.0.1",
         "env-paths": "^3.0.0",
+        "fast-glob": "^3.2.12",
         "ink": "^4.0.0",
         "ink-text-input": "^5.0.0",
         "openai": "^3.2.1",
